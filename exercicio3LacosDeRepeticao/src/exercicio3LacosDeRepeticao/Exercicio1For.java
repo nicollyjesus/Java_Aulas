@@ -3,31 +3,31 @@ package exercicio3LacosDeRepeticao;
 import java.util.Scanner;
 
 public class Exercicio1For {
+    public static void main(String[] args) {
+        
+        Scanner scanner = new Scanner(System.in);
 
-	public static void main(String[] args) {
+        // Entrada de dados
+        System.out.print("Digite o primeiro número do intervalo: ");
+        int inicio = scanner.nextInt();
 
-		Scanner scanner = new Scanner (System.in);
-		
-		int primeiroNumero;
-		int segundoNumero;
-		
-		System.out.println("Digite o primeiro número do intervalo: ");
-		primeiroNumero = scanner.nextInt();
-		
-		System.out.println("Digite o promeiro número do intervalo: ");
-		segundoNumero = scanner.nextInt();
-		
-		if (primeiroNumero <= segundoNumero){
-			for (int multiplos = 0; multiplos <= 100; multiplos++) {
-				System.out.println("O primeiro é maior que o segundo!");
-				System.out.printf("%d x %d = %d%n", primeiroNumero, segundoNumero, multiplos, primeiroNumero * segundoNumero * multiplos);	
-			}
-		} else {
-			System.out.println("o intervalo é inválido! ");
-			
-		}
-		
-		
+        System.out.print("Digite o último número do intervalo: ");
+        int fim = scanner.nextInt();
 
-	}
+        // Validação do intervalo
+        if (inicio >= fim) {
+            System.out.println("\nIntervalo inválido!");
+        } else {
+            System.out.println("\nNo Intervalo entre " + inicio + " e " + fim + ":");
+
+            // Laço de repetição FOR para percorrer o intervalo
+            for (int i = inicio; i <= fim; i++) {
+                // Verificação se é múltiplo de 3 e 5
+                if (i % 3 == 0 && i % 5 == 0) {
+                    System.out.println(i + " é múltiplo de 3 e 5");
+                }
+            }
+        }
+        scanner.close();
+    }
 }
