@@ -37,7 +37,6 @@ public class ExercicioIfElse {
 			System.out.println(" = " + valorC);
 			System.out.println("C é maior do que A e B");
 		}
-		
 		scanner.close();
 	}
 }

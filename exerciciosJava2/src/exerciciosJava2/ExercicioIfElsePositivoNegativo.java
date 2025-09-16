@@ -42,7 +42,6 @@ public class ExercicioIfElsePositivoNegativo {
 		} else { // Caso o número seja zero → imprime uma frase específica
 			System.out.println("O numero digitado é zero");
 		}
-		
 		scanner.close();
 	}
 }
